@@ -9,3 +9,4 @@ This is course work for the Udemy Course **Go: The Complete Guide** from Maximil
   - Variables
   - Functions
   - String formatting
+  - Reading and writing files
