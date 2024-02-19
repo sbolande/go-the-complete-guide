@@ -24,3 +24,7 @@ This is course work for the Udemy Course **Go: The Complete Guide** from Maximil
   - Inheritance
   - JSON encoding
   - Struct tags
+- [Section 06: Interfaces & Generic Code](https://github.com/sbolande/go-the-complete-guide/tree/section06)
+  - Interfaces
+  - Type casting
+  - Generic types

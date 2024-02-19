@@ -1,4 +1,4 @@
-package notes
+package main
 
 import (
 	"bufio"
@@ -7,15 +7,46 @@ import (
 	"strings"
 
 	"example.com/notes/note"
+	"example.com/notes/todo"
 )
+
+type Saver interface {
+	Save() error
+}
+type Outputtable interface {
+	Saver
+	Display()
+}
 
 func main() {
 	title, content := getNoteData()
+  todoText := getUserInput("Todo text")
+
 	userNote, err := note.New(title, content)
 	if err != nil { panic(err) }
-	userNote.Display()
-	err = userNote.Save()
+	todo, err := todo.New(todoText)
 	if err != nil { panic(err) }
+
+	err = outputData(todo)
+	if err != nil { return }
+
+	err = outputData(userNote)
+	if err != nil { return }
+}
+
+func outputData(data Outputtable) error {
+	data.Display()
+	return saveData(data)
+}
+
+func saveData(data Saver) error {
+	err := data.Save()
+	if err != nil { 
+		fmt.Println("Saving was unsuccessful.")
+		return err
+	}
+	fmt.Println("Saving was successful!")
+	return nil
 }
 
 func getNoteData() (string, string) {
