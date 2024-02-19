@@ -12,3 +12,6 @@ This is course work for the Udemy Course **Go: The Complete Guide** from Maximil
   - String formatting
   - Reading and writing files
   - Loops
+- [Section 03: Working with Packages](https://github.com/sbolande/go-the-complete-guide/tree/section03)
+  - Additional modules
+  - Third party libraries/modules
