@@ -14,6 +14,8 @@ func main() {
 	userNote, err := note.New(title, content)
 	if err != nil { panic(err) }
 	userNote.Display()
+	err = userNote.Save()
+	if err != nil { panic(err) }
 }
 
 func getNoteData() (string, string) {
