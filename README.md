@@ -6,7 +6,9 @@ This is course work for the Udemy Course **Go: The Complete Guide** from Maximil
 
 - [Section 02: Go Essentials](https://github.com/sbolande/go-the-complete-guide/tree/section02)
   - Go modules
-  - Variables
+  - Variables and constants
   - Functions
+  - If/else and switch statements
   - String formatting
   - Reading and writing files
+  - Loops
