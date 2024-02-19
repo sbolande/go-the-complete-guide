@@ -11,7 +11,7 @@ func main() {
 	lastName := getUserData("Please enter your last name: ")
 	birthDate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
 
-	appUser, err := user.NewUser(firstName, lastName, birthDate)
+	appUser, err := user.New(firstName, lastName, birthDate)
 	if err != nil {
 		panic(err)
 	}

@@ -7,30 +7,30 @@ import (
 )
 
 type User struct {
-	FirstName string
-	LastName string
-	BirthDate string
-	CreatedAt time.Time
+	firstName string
+	lastName string
+	birthDate string
+	createdAt time.Time
 }
 
 func (u User) OutputUserDetails() {
-	fmt.Println(u.FirstName, u.LastName, u.BirthDate)
+	fmt.Println(u.firstName, u.lastName, u.birthDate)
 }
 
 func (u *User) ClearUserName() {
-	u.FirstName = ""
-	u.LastName = ""
+	u.firstName = ""
+	u.lastName = ""
 }
 
-func NewUser(fName, lName, birthDate string) (*User, error) {
+func New(fName, lName, birthDate string) (*User, error) {
 	if fName == "" || lName == "" || birthDate == "" {
 		return nil, errors.New("first name, last name, and birthdate are required")
 	}
 
 	return &User{
-		FirstName: fName,
-		LastName: lName,
-		BirthDate: birthDate,
-		CreatedAt: time.Now(),
+		firstName: fName,
+		lastName: lName,
+		birthDate: birthDate,
+		createdAt: time.Now(),
 	}, nil
 }
