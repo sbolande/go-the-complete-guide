@@ -15,3 +15,6 @@ This is course work for the Udemy Course **Go: The Complete Guide** from Maximil
 - [Section 03: Working with Packages](https://github.com/sbolande/go-the-complete-guide/tree/section03)
   - Additional modules
   - Third party libraries/modules
+- [Section 04: Understanding Pointers](https://github.com/sbolande/go-the-complete-guide/tree/section04)
+  - Creating pointers
+  - Mutating values with references
