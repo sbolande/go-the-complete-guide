@@ -8,20 +8,35 @@ import (
 type user struct {
 	firstName string
 	lastName string
-	birthdate string
+	birthDate string
 	createdAt time.Time
+}
+
+func (u user) outputUserDetails() {
+	fmt.Println(u.firstName, u.lastName, u.birthDate)
+}
+
+func (u *user) clearUserName() {
+	u.firstName = ""
+	u.lastName = ""
 }
 
 func main() {
 	firstName := getUserData("Please enter your first name: ")
 	lastName := getUserData("Please enter your last name: ")
-	birthdate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
+	birthDate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
+
+	appUser := user{
+		firstName,
+		lastName,
+		birthDate,
+		time.Now(),
+	}
 
 	// ... do something awesome with that gathered data!
-	outputUserDetails()
-}
-
-func outputUserDetails() {
+	appUser.outputUserDetails()
+	appUser.clearUserName()
+	appUser.outputUserDetails()
 }
 
 func getUserData(promptText string) string {
