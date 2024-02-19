@@ -18,3 +18,5 @@ This is course work for the Udemy Course **Go: The Complete Guide** from Maximil
 - [Section 04: Understanding Pointers](https://github.com/sbolande/go-the-complete-guide/tree/section04)
   - Creating pointers
   - Mutating values with references
+- [Section 05: Structs & Custom Types](https://github.com/sbolande/go-the-complete-guide/tree/section05)
+  - Structs (properties, methods, and constructors)
