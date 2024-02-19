@@ -20,3 +20,4 @@ This is course work for the Udemy Course **Go: The Complete Guide** from Maximil
   - Mutating values with references
 - [Section 05: Structs & Custom Types](https://github.com/sbolande/go-the-complete-guide/tree/section05)
   - Structs (properties, methods, and constructors)
+  - External structs and accessor
